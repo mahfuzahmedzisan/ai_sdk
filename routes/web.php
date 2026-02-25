@@ -14,4 +14,12 @@ Route::get('dashboard', function () {
     return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('chat', function () {
+    return Inertia::render('chat');
+})->name('chat');
+
+Route::get('chat/history', function () {
+    return Inertia::render('chat/history');
+})->name('chat.history');
+
 require __DIR__.'/settings.php';
